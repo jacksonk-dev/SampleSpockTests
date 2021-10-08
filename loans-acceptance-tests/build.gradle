@@ -1,0 +1,6 @@
+tasks.withType(Test) {
+    maxParallelForks = System.getProperty("maxParallelForks") ?: 4
+}
+test {
+    systemProperty "environment", System.getProperty("environment")
+}

@@ -1,0 +1,17 @@
+.idea
+.gradle
+out
+build/
+V1_files
+.DS_Store
+.vscode/
+.project
+.settings/
+bin/
+.classpath
+allure-results/
+allure-report/
+/e2e-script/config.groovy
+/e2e-script/src/test/resources
+/*.iml
+/*/*.iml
