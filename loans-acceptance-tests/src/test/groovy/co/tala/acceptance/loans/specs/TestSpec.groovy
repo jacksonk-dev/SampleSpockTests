@@ -95,4 +95,14 @@ class TestSpec extends Specification {
       reportInfo "g_status: Manual, g_type: Positive"
     }
 
+     def "No big deal test"() {
+      given: "accc"
+
+      when: "www"
+
+      then: "ttt"
+          1 == 1
+
+      reportInfo "g_status: Manual, g_type: Positive"
+    }
 }
