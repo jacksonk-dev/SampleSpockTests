@@ -6,7 +6,7 @@ pipeline {
       steps {
         echo 'Building..'
         sh '''
-          cd /home/jekay/Desktop/SampleSpockTests'
+          cd /home/jekay/Desktop/SampleSpockTests
           ./gradlew l
         '''
       }
