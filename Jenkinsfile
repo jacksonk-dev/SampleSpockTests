@@ -5,8 +5,10 @@ pipeline {
     stage('Jackson Build') {
       steps {
         echo 'Building..'
-        sh 'cd /home/jekay/Desktop/SampleSpockTests'
-        // ./gradlew l
+        sh '''
+          cd /home/jekay/Desktop/SampleSpockTests'
+          ./gradlew l
+        '''
       }
     }
     stage('Jackson Deploy') {
