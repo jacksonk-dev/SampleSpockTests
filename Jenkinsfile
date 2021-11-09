@@ -7,5 +7,10 @@ pipeline {
                 echo 'Building..'
             }
         }
+        stage('Jackson Deploy') {
+            steps {
+                echo 'Building..'
+            }
+        }
     }
 }
