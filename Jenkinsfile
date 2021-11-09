@@ -6,7 +6,7 @@ pipeline {
       steps {
         echo 'Building..'
         // cd '/home/jekay/Desktop/SampleSpockTests'
-        // ./gradlew l
+        ./gradlew l
       }
     }
     stage('Jackson Deploy') {
