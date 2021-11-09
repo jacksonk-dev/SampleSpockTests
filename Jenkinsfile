@@ -19,7 +19,7 @@ pipeline {
   }
   post {
     always {
-        archiveArtifacts artifacts: '.*/loans-acceptance-tests/build/spock-reports/*.html', onlyIfSuccessful: true
+        archiveArtifacts artifacts: '*/loans-acceptance-tests/build/spock-reports/*.html', onlyIfSuccessful: true
     }
   }
 }
