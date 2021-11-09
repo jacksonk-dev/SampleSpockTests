@@ -19,7 +19,7 @@ pipeline {
   }
   post {
     always {
-        archiveArtifacts artifacts: '*', onlyIfSuccessful: true
+        archiveArtifacts artifacts: 'oans-acceptance-tests/src/*', onlyIfSuccessful: true
         // archiveArtifacts artifacts: '*/loans-acceptance-tests/build/spock-reports/*.html', onlyIfSuccessful: true
     }
   }
