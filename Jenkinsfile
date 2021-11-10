@@ -7,6 +7,7 @@ pipeline {
         echo 'Building..'
         sh '''
           cd /home/jekay/Desktop/SampleSpockTests
+          rm -r loans-acceptance-tests/build
           ./gradlew l
         '''
       }
@@ -19,8 +20,7 @@ pipeline {
   }
   post {
     always {
-        archiveArtifacts artifacts: 'loans-acceptance-tests/src/*', onlyIfSuccessful: true
-        // archiveArtifacts artifacts: '*/loans-acceptance-tests/build/spock-reports/*.html', onlyIfSuccessful: true
+        archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*.html', onlyIfSuccessful: true
     }
   }
 }
