@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.tala.acceptance.loans.specs.TestSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-11-10T10:34:12" hostname="jekay-pc" time="0.384">
+  <properties/>
+  <testcase name="Positive Automated Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.332"/>
+  <testcase name="Positive Manual Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.018"/>
+  <testcase name="Negative Automated Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.011"/>
+  <testcase name="Negative Manual Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.01"/>
+  <testcase name="Positive Manual Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.004"/>
+  <testcase name="No big deal tests" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>
