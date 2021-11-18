@@ -1,15 +1,15 @@
 def postReportToGezako() {
-  def post = new URL("http://localhost:3000/jenkins-called").openConnection();
+  def post = new URL("https://gezako.com").openConnection();
   def message = '{"Gezako Over"}'
   post.setRequestMethod("POST")
   post.setDoOutput(true)
   post.setRequestProperty("Content-Type", "application/json")
   post.getOutputStream().write(message.getBytes("UTF-8"));
   def postRC = post.getResponseCode();
-  // println(postRC);
   if(postRC.equals(200)) {
     println('Successfully Posted to Gezako');
   } else {
+    println(postRC);
     println('Failed to post to Gezaoko');
   }
 }
