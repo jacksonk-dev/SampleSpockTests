@@ -8,7 +8,7 @@ def postReportToGezako() {
   def postRC = post.getResponseCode();
   // println(postRC);
   if(postRC.equals(200)) {
-      println('Successfully Posted to Gezako');
+    println('Successfully Posted to Gezako');
   } else {
     println('Failed to post to Gezaoko');
   }
