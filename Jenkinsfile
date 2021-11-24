@@ -1,5 +1,5 @@
 def postReportToGezako() {
-  def post = new URL("https://gezako.com").openConnection();
+  def post = new URL("http://localhost:5001/gezako-staging/us-central1/app/cli").openConnection();
   def message = '{"Gezako Over"}'
   post.setRequestMethod("POST")
   post.setDoOutput(true)
