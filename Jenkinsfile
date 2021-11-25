@@ -1,5 +1,5 @@
 def postReportToGezako() {
-  def post = new URL("http://localhost:5001/gezako-staging/us-central1/app/cli").openConnection();
+  def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
   def message = '{"Gezako Over"}'
   post.setRequestMethod("POST")
   post.setDoOutput(true)
@@ -10,7 +10,7 @@ def postReportToGezako() {
     println('Successfully Posted to Gezako');
   } else {
     println(postRC);
-    println('Failed to post to Gezaoko');
+    println('Failed to post to Gezako');
   }
 }
 
