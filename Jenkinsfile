@@ -1,6 +1,6 @@
 def postReportToGezako() {
   def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
-  def message = '{"Gezako Over"}'
+  def message = '{"name":"Gezako"}'
   post.setRequestMethod("POST")
   post.setDoOutput(true)
   post.setRequestProperty("Content-Type", "application/json")
