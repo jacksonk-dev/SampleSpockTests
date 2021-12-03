@@ -1,4 +1,4 @@
-def postReportToGezako() {
+def postReportToGezako(testReports) {
   def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
   def message = '{"name":"Gezako"}'
   post.setRequestMethod("POST")
@@ -36,8 +36,11 @@ pipeline {
   }
   post {
     always {
-        archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*TestSpec.html', onlyIfSuccessful: true
-        postReportToGezako()
+      echo 'Printing...'
+      sh 'ls -a'
+      echo 'Should be done printing'
+      archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*TestSpec.html', onlyIfSuccessful: true
+      postReportToGezako('loans-acceptance-tests/build/spock-reports/*TestSpec.html')
     }
   }
 }
