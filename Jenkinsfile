@@ -37,7 +37,7 @@ pipeline {
   post {
     always {
       echo 'Printing...'
-      sh 'ls -a'
+      sh 'ls -a loans-acceptance-tests/build/spock-reports'
       echo 'Should be done printing'
       archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*TestSpec.html', onlyIfSuccessful: true
       postReportToGezako('loans-acceptance-tests/build/spock-reports/*TestSpec.html')
