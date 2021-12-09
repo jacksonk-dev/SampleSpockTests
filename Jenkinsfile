@@ -11,6 +11,7 @@ def postReportToGezako(testReport) {
   post.getOutputStream().write(message.getBytes("UTF-8"));
   def postRC = post.getResponseCode();
   if(postRC.equals(200)) {
+    println(post)
     println('Successfully Posted to Gezako');
   } else {
     println(postRC);
