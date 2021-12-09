@@ -1,4 +1,6 @@
 def postReportToGezako(testReport) {
+  String fileContents = new File(testReport).getText('UTF-8');
+  print(fileContents);
   def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
   def message = '{"name":"Gezako"}'
   post.setRequestMethod("POST")
@@ -38,8 +40,6 @@ pipeline {
     always {
       echo 'Printing...'
       sh 'ls -a loans-acceptance-tests/build/spock-reports'
-      String fileContents = new File('loans-acceptance-tests/build/spock-reports/co.tala.acceptance.loans.specs.TestSpec.html').getText('UTF-8');
-      echo fileContents
       echo 'Should be done printing'
       // archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*TestSpec.html', onlyIfSuccessful: true
       postReportToGezako('loans-acceptance-tests/build/spock-reports/co.tala.acceptance.loans.specs.TestSpec.html')
