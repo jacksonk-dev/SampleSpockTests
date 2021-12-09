@@ -1,27 +1,16 @@
 def postReportToGezako(testReport) {
-// https://us-central1-gezako-staging.cloudfunctions.net/app/cli
-
-  @Grapes([
-    @Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7'),
-    @Grab('org.apache.httpcomponents:httpmime:4.5.1')
-  ])
-
-  String jsonText ='''{"parameter": [{"name":"test-report","file":"file0"}]}'''
-  File file = new File(testReport);
-
-  def http = new HTTPBuilder('https://us-central1-gezako-staging.cloudfunctions.net/app/cli')
-
-  http.request(Method.POST, ContentType.TEXT) {req->
-      MultipartEntityBuilder multipartRequestEntity = new MultipartEntityBuilder()
-      multipartRequestEntity.addPart('file0', new FileBody(file, "text/html"))
-      multipartRequestEntity.addPart('json', new StringBody(jsonText))
-
-      req.entity =  multipartRequestEntity.build()
-
-      response.success = { resp, data ->
-          // response text
-          println data.getText()
-      }
+  def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
+  def message = '{"name":"Gezako"}'
+  post.setRequestMethod("POST")
+  post.setDoOutput(true)
+  post.setRequestProperty("Content-Type", "application/json")
+  post.getOutputStream().write(message.getBytes("UTF-8"));
+  def postRC = post.getResponseCode();
+  if(postRC.equals(200)) {
+    println('Successfully Posted to Gezako');
+  } else {
+    println(postRC);
+    println('Failed to post to Gezako');
   }
 }
 
