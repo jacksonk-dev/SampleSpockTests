@@ -1,7 +1,7 @@
 def postReportToGezako(testReport) {
   String fileContents = new File(testReport).getText('UTF-8');
   def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
-  def message = '{"name":"Gezako", "reportText":"'+fileContents+'"}';
+  def message = JsonOutput.toJson([name:"Gezako", reportText: fileContents]);
   print(message);
   post.setRequestMethod("POST")
   post.setDoOutput(true)
