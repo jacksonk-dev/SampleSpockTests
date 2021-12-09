@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.tala.acceptance.loans.specs.TestSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-12-09T11:54:34" hostname="jekay-pc" time="0.14">
+<testsuite name="co.tala.acceptance.loans.specs.TestSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-12-09T12:03:53" hostname="jekay-pc" time="0.232">
   <properties/>
-  <testcase name="Positive Automated Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.123"/>
-  <testcase name="Positive Manual Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.004"/>
-  <testcase name="Negative Automated Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.002"/>
+  <testcase name="Positive Automated Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.212"/>
+  <testcase name="Positive Manual Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.005"/>
+  <testcase name="Negative Automated Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.003"/>
   <testcase name="Negative Manual Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.003"/>
   <testcase name="Positive Manual Test" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.003"/>
   <testcase name="No big deal tests" classname="co.tala.acceptance.loans.specs.TestSpec" time="0.003"/>
