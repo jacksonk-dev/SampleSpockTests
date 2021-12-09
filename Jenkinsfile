@@ -38,6 +38,8 @@ pipeline {
     always {
       echo 'Printing...'
       sh 'ls -a loans-acceptance-tests/build/spock-reports'
+      String fileContents = new File('loans-acceptance-tests/build/spock-reports/co.tala.acceptance.loans.specs.TestSpec.html').getText('UTF-8');
+      echo fileContents
       echo 'Should be done printing'
       // archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*TestSpec.html', onlyIfSuccessful: true
       postReportToGezako('loans-acceptance-tests/build/spock-reports/co.tala.acceptance.loans.specs.TestSpec.html')
