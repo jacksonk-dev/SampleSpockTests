@@ -42,7 +42,7 @@ pipeline {
       sh 'ls -a loans-acceptance-tests/build/spock-reports'
       echo 'Should be done printing'
       // archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*TestSpec.html', onlyIfSuccessful: true
-      postReportToGezako('loans-acceptance-tests/build/spock-reports/co.tala.acceptance.loans.specs.TestSpec.html')
+      postReportToGezako('/home/jekay/Desktop/SampleSpockTests/loans-acceptance-tests/build/spock-reports/co.tala.acceptance.loans.specs.TestSpec.html')
     }
   }
 }
