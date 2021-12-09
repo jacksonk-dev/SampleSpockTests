@@ -1,10 +1,10 @@
 def postReportToGezako(testReport) {
 // https://us-central1-gezako-staging.cloudfunctions.net/app/cli
 
-  @Grapes([
-    @Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7'),
-    @Grab('org.apache.httpcomponents:httpmime:4.5.1')
-  ])
+  // @Grapes([
+    @Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7');
+    @Grab('org.apache.httpcomponents:httpmime:4.5.1');
+  // ])
 
   String jsonText ='''{"parameter": [{"name":"test-report","file":"file0"}]}'''
   File file = new File(testReport);
