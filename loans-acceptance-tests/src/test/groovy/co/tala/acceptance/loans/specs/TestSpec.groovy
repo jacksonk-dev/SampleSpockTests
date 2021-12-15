@@ -105,4 +105,17 @@ class TestSpec extends Specification {
 
       reportInfo "g_status: Manual, g_type: Positive"
     }
+
+    def "It works my nigga"() {
+      given: "this"
+
+      when: "that"
+
+      then: "something should happen"
+          1 == 1
+
+      reportInfo "g_status: Manual, g_type: Positive"
+    }
 }
+}
+
