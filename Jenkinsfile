@@ -1,9 +1,9 @@
 import groovy.json.JsonOutput
 
 def postReportToGezako(testReport) {
-  // String fileContents = new File(testReport).getText('UTF-8');
+  String fileContents = new File(testReport).getText('UTF-8');
   def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
-  def message = JsonOutput.toJson([from:"Gezako Jenkins yo"]);
+  def message = JsonOutput.toJson([from:"Gezako Jenkins yo", reportText]);
   post.setRequestMethod("POST")
   post.setDoOutput(true)
   post.setRequestProperty("Content-Type", "application/json")
