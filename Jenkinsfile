@@ -1,20 +1,23 @@
 import groovy.json.JsonOutput
 
-def postReportToGezako(testReport) {
+def runGezakoPlugin(testReport) {
   String fileContents = new File(testReport).getText('UTF-8');
-  def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
-  def message = JsonOutput.toJson([from:"Gezako Jenkins yo", reportText: fileContents]);
-  post.setRequestMethod("POST")
-  post.setDoOutput(true)
-  post.setRequestProperty("Content-Type", "application/json")
-  post.getOutputStream().write(message.getBytes("UTF-8"));
-  def postRC = post.getResponseCode();
-  if(postRC.equals(200)) {
-    println('Successfully Posted to Gezako');
-  } else {
-    println(postRC);
-    println('Failed to post to Gezako');
-  }
+
+  // Run plugin, providing all the necessary info
+
+  // def post = new URL("https://us-central1-gezako-staging.cloudfunctions.net/app/cli").openConnection();
+  // def message = JsonOutput.toJson([from:"Gezako Jenkins yo", reportText: fileContents]);
+  // post.setRequestMethod("POST")
+  // post.setDoOutput(true)
+  // post.setRequestProperty("Content-Type", "application/json")
+  // post.getOutputStream().write(message.getBytes("UTF-8"));
+  // def postRC = post.getResponseCode();
+  // if(postRC.equals(200)) {
+  //   println('Successfully Posted to Gezako');
+  // } else {
+  //   println(postRC);
+  //   println('Failed to post to Gezako');
+  // }
 }
 
 pipeline {
@@ -39,11 +42,11 @@ pipeline {
   }
   post {
     always {
-      echo 'Printing...'
-      sh 'ls -a loans-acceptance-tests/build/spock-reports'
-      echo 'Should be done printing'
-      // archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*TestSpec.html', onlyIfSuccessful: true
-      postReportToGezako('/home/jekay/Desktop/SampleSpockTests/loans-acceptance-tests/build/spock-reports/co.tala.acceptance.loans.specs.TestSpec.html')
+      // echo 'Printing...'
+      // sh 'ls -a loans-acceptance-tests/build/spock-reports'
+      // echo 'Should be done printing'
+      // // archiveArtifacts artifacts: 'loans-acceptance-tests/build/spock-reports/*TestSpec.html', onlyIfSuccessful: true
+      runGezakoPlugin('/home/jekay/Desktop/SampleSpockTests/loans-acceptance-tests/build/spock-reports/co.tala.acceptance.loans.specs.TestSpec.html')
     }
   }
 }

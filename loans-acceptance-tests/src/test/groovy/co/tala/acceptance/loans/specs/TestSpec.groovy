@@ -89,7 +89,7 @@ class TestSpec extends Specification {
 
       when: "www"
 
-      then: "ttt"
+      then: "tttt"
           1 == 1
 
       reportInfo "g_status: Manual, g_type: Positive"
