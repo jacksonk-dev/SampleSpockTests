@@ -37,7 +37,7 @@ import spock.lang.Unroll
 @Unroll
 // @GezakoStatus
 @Title("User does sth")
-class TestSpec extends Specification {
+class TestSpecAgain extends Specification {
     def "Positive Automated Test"() {
       given: "accc"
 
@@ -117,5 +117,3 @@ class TestSpec extends Specification {
       reportInfo "g_status: Manual, g_type: Positive"
     }
 }
-}
-
