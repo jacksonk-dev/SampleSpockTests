@@ -1,5 +1,7 @@
 package co.tala.acceptance.loans.specs
 
+import spock.lang.Narrative
+
 //@Retention & @Target come from here
 // import java.lang.annotation.*
 // import org.spockframework.runtime.extension.ExtensionAnnotation
@@ -35,7 +37,7 @@ import spock.lang.Unroll
 // }
 
 @Unroll
-// @GezakoStatus
+@Narrative("featureId: ZUV9qQ4vqpkoajlXviv0")
 @Title("User does sth")
 class TestSpecAgain extends Specification {
     def "Positive Automated Test"() {
@@ -49,17 +51,6 @@ class TestSpecAgain extends Specification {
       reportInfo "g_status: Automated, g_type: Positive"
       // gezakoStatus "Automated"
       // gezakoTitle "Something"
-    }
-
-    def "Positive Manual Test"() {
-      given: "accc"
-
-      when: "www"
-
-      then: "ttt"
-          1 == 1
-
-      reportInfo "g_status: Manual, g_type: Positive"
     }
 
     def "Negative Automated Test"() {
