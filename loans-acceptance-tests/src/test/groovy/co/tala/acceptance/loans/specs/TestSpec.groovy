@@ -40,7 +40,7 @@ import spock.lang.Unroll
 @Narrative("featureId: iZhx6EQ6eHxeKUqKj5eX")
 @Title("User does sth")
 class TestSpecAgain extends Specification {
-    def "Positive Manual Test 1"() {
+    def "Positive Manual Test 0"() {
       given: "accc"
 
       when: "www"
