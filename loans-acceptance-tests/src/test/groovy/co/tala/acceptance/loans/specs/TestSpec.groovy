@@ -40,7 +40,7 @@ import spock.lang.Unroll
 @Narrative("featureId: 4bTMxCajoDGm6qCdDf2T")
 @Title("User does sth")
 class TestSpecAgain extends Specification {
-    def "Negative Automated Test 1"() {
+    def "Positive Manual Test 1"() {
       given: "accc"
 
       when: "www"
@@ -48,7 +48,7 @@ class TestSpecAgain extends Specification {
       then: "ttt"
           1 == 1
 
-      reportInfo "g_status: Automated, g_type: Negative"
+      reportInfo "g_status: Manual, g_type: Positive"
       // gezakoStatus "Automated"
       // gezakoTitle "Something"
     }
