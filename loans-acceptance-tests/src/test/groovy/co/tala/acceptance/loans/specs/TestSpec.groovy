@@ -37,7 +37,7 @@ import spock.lang.Unroll
 // }
 
 @Unroll
-//@Narrative("featureId: nIQCcjpoBpfQVRtHx1pI")
+@Narrative("featureId: nIQCcjpoBpfQVRtHx1pI")
 @Title("User does sth")
 class TestSpecAgain extends Specification {
     def "Positive Manual Test 0"() {
@@ -48,7 +48,7 @@ class TestSpecAgain extends Specification {
       then: "ttt"
           1 == 1
 
-      reportInfo "g_status: Manual, g_type: Positive"
+      reportInfo "g_status: Automated, g_type: Positive"
       // gezakoStatus "Automated"
       // gezakoTitle "Something"
     }
@@ -72,7 +72,7 @@ class TestSpecAgain extends Specification {
       then: "ttt"
           1 == 1
 
-      reportInfo "g_status: Manual, g_type: Negative"
+      reportInfo "g_status: Automated, g_type: Negative"
     }
 
     def "Positive Manual Test"() {
@@ -94,7 +94,7 @@ class TestSpecAgain extends Specification {
       then: "ttt"
           1 == 1
 
-      reportInfo "g_status: Manual, g_type: Positive"
+      reportInfo "g_status: Automated, g_type: Positive"
     }
 
     def "It works my nigga"() {
@@ -105,6 +105,6 @@ class TestSpecAgain extends Specification {
       then: "something should happen"
           1 == 1
 
-      reportInfo "g_status: Manual, g_type: Positive"
+      reportInfo "g_status: Automated, g_type: Positive"
     }
 }
