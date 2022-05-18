@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.tala.acceptance.loans.specs.TestSpecAgain" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-05-17T15:44:26" hostname="DESKTOP-1MS90Q9" time="0.325">
+<testsuite name="co.tala.acceptance.loans.specs.TestSpecAgain" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-05-18T10:36:24" hostname="DESKTOP-1MS90Q9" time="0.429">
   <properties/>
-  <testcase name="Positive Manual Test 0" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.291"/>
-  <testcase name="Negative Automated Test" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.008"/>
-  <testcase name="Negative Manual Test" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.006"/>
-  <testcase name="Positive Manual Test" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.007"/>
-  <testcase name="No big deal tests" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.004"/>
-  <testcase name="It works my nigga" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.006"/>
+  <testcase name="Positive Manual Test 0" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.302"/>
+  <testcase name="Negative Automated Test" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.017"/>
+  <testcase name="Negative Manual Test" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.036"/>
+  <testcase name="Positive Manual Test" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.019"/>
+  <testcase name="No big deal tests" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.027"/>
+  <testcase name="It works my nigga" classname="co.tala.acceptance.loans.specs.TestSpecAgain" time="0.017"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
