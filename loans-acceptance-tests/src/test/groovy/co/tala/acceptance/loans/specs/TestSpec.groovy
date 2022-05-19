@@ -37,7 +37,7 @@ import spock.lang.Unroll
 // }
 
 @Unroll
-@Narrative("featureId: nIQCcjpoBpfQVRtHx1pI")
+@Narrative("featureId: nIQCcjpoBpfQVRtHx1p")
 @Title("User does sth")
 class TestSpecAgain extends Specification {
     def "Positive Manual Test 0"() {
